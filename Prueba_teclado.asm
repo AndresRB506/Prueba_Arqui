@@ -40,6 +40,14 @@ _mostrar:
 	mov rsi,variable
 	mov rdx,1
 	syscall
+
+;salto de linea
+	mov rax,1
+	mov rdi,1
+	mov rsi,newline
+	mov rdx,1
+	syscall
+
 _fin:
 	mov rax,1
 	mov rdi,1
@@ -49,3 +57,6 @@ _fin:
 	mov rax,60
 	mov rdi,0
 	syscall
+
+section .bss
+	newline resb 1
